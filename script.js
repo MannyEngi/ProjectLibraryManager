@@ -35,5 +35,19 @@ class Book{
     }
 }
 
+let registeredUsers = [];
+let currentUser = null;
+
+const registerUser = () => {
+    const userName = document.getElementById('userName').value;
+    const userEmail = document.getElementById('userEmail').value;
+
+    const newUser = new User(userName, userEmail);
+    registeredUsers.push(newUser);
+
+    populateUserDropdown();
+
+    displayCurrentUser();
+}; 
 
 
